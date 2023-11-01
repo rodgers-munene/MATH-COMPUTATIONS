@@ -19,8 +19,13 @@ public class Main {
         double resultVal = divisionInstance.divide(firstNumber, secondNumber);
 
         // Display result to user
-        System.out.println("Result: " + resultVal);
-        
+        System.out.println("Divison of two numbers is: " + resultVal);
+
+        // addtion class
+        double sum = Addition.add(firstNumber, secondNumber);
+
+        System.out.println("Sum of two numbers: " + sum);
+
         // close the scanner (java best practice)
         scanner.close();
     }
