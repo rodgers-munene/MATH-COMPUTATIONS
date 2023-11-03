@@ -1,17 +1,8 @@
 import java.util.Scanner;
 
 
+
 public class Main {
-    public class Division {
-        public double divide(double dividend, double divisor) {
-            if (divisor == 0) {
-                System.out.println("Cannot divide by zero!");
-                return Double.NaN; // Handle division by zero
-            }
-            return dividend / divisor;
-        }
-    }
-    
     public static void main(String[] args) {
         double firstNumber, secondNumber;
         Scanner in = new Scanner(System.in);
@@ -19,7 +10,7 @@ public class Main {
         System.out.println("1: Addition");
         System.out.println("2: Division");
         System.out.println("3: Area of a Triange");
-        System.out.print("\nPlease Select the operation you would like to perfom: \n");
+        System.out.print("\nPlease Select the operation you would like to perfom: ");
         int choice = in.nextInt();
 
         switch (choice) {
@@ -44,12 +35,13 @@ public class Main {
                 firstNumber = in.nextDouble();
                 System.out.print("Enter the Height of the triangle: ");
                 secondNumber = in.nextDouble();
-                TriangleArea triange = new TriangleArea();
-                System.out.println("Result = " + triange.area(firstNumber, secondNumber));
+                TriangleArea area = new TriangleArea();
+                System.out.println("Result = " + area.area(firstNumber, secondNumber));
                 break;
             default:
                 System.out.println("Invalid Input!!!");
                 break;
         }
+    in.close();
     }
 }
