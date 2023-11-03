@@ -2,6 +2,16 @@ import java.util.Scanner;
 
 
 public class Main {
+    public class Division {
+        public double divide(double dividend, double divisor) {
+            if (divisor == 0) {
+                System.out.println("Cannot divide by zero!");
+                return Double.NaN; // Handle division by zero
+            }
+            return dividend / divisor;
+        }
+    }
+    
     public static void main(String[] args) {
         double firstNumber, secondNumber;
         Scanner in = new Scanner(System.in);
