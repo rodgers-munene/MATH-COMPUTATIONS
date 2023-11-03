@@ -1,32 +1,45 @@
 import java.util.Scanner;
 
+
 public class Main {
     public static void main(String[] args) {
-        // Create an instance of the Division Class
-        Division divisionInstance = new Division();
+        double firstNumber, secondNumber;
+        Scanner in = new Scanner(System.in);
+        System.out.println("\nOperations: ");
+        System.out.println("1: Addition");
+        System.out.println("2: Division");
+        System.out.println("3: Area of a Triange");
+        System.out.print("\nPlease Select the operation you would like to perfom: \n");
+        int choice = in.nextInt();
 
-        // get user input by creating a Scanner object
-        Scanner scanner = new Scanner(System.in);
-
-        // prompt for input
-        System.out.println("Enter the first number: ");
-        double firstNumber = scanner.nextDouble();
-
-        System.out.println("Enter the second number: ");
-        double secondNumber = scanner.nextDouble();
-
-        // call the divide method from Division class
-        double resultVal = divisionInstance.divide(firstNumber, secondNumber);
-
-        // Display result to user
-        System.out.println("Divison of two numbers is: " + resultVal);
-
-        // addtion class
-        double sum = Addition.add(firstNumber, secondNumber);
-
-        System.out.println("Sum of two numbers: " + sum);
-
-        // close the scanner (java best practice)
-        scanner.close();
+        switch (choice) {
+            case 1:
+                System.out.print("Enter the first number: ");
+                firstNumber = in.nextDouble();
+                System.out.print("Enter the second number: ");
+                secondNumber = in.nextDouble();
+                Addition add = new Addition();
+                System.out.println("Result = " + add.add(firstNumber, secondNumber));
+                break;
+            case 2:
+                System.out.print("Enter the first number: ");
+                firstNumber = in.nextDouble();
+                System.out.print("Enter the second number: ");
+                secondNumber = in.nextDouble();
+                Division divide = new Division();
+                System.out.println("Result = " + divide.divide(firstNumber, secondNumber));
+                break;
+            case 3:
+                System.out.print("Enter the Base of the triangle: ");
+                firstNumber = in.nextDouble();
+                System.out.print("Enter the Height of the triangle: ");
+                secondNumber = in.nextDouble();
+                TriangleArea triange = new TriangleArea();
+                System.out.println("Result = " + triange.area(firstNumber, secondNumber));
+                break;
+            default:
+                System.out.println("Invalid Input!!!");
+                break;
+        }
     }
 }
