@@ -10,6 +10,7 @@ public class Main {
         System.out.println("1: Addition");
         System.out.println("2: Division");
         System.out.println("3: Area of a Triange");
+        System.out.println("4: Perimeter of a rectangle");
         System.out.print("\nPlease Select the operation you would like to perfom: ");
         int choice = in.nextInt();
 
@@ -38,6 +39,15 @@ public class Main {
                 TriangleArea area = new TriangleArea();
                 System.out.println("Result = " + area.area(firstNumber, secondNumber));
                 break;
+            case 4:
+                System.out.print("Enter the length of the rextangle:");
+                firstNumber = in.nextDouble();
+                System.out.print("Enter the width of the rectangle: ");
+                secondNumber = in.nextDouble();
+                RectanglePerimeter perimeter = new RectanglePerimeter();
+                System.out.println("Result = " + perimeter.perimeter(firstNumber, secondNumber));
+                break;
+
             default:
                 System.out.println("Invalid Input!!!");
                 break;
