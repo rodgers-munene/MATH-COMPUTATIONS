@@ -12,6 +12,7 @@ public class Main {
         System.out.println("3: Area of a Triange");
         System.out.println("4: Perimeter of a rectangle");
         System.out.println("5: Area of Circle");
+        System.out.println("6: Multiplication");
         System.out.print("\nPlease Select the operation you would like to perfom: ");
         int choice = in.nextInt();
 
@@ -53,7 +54,14 @@ public class Main {
                 firstNumber = in.nextDouble();
                 CircleArea circle = new CircleArea();
                 System.out.println("Result = " + circle.area(firstNumber));
-                break;        
+                break; 
+            case 6:
+                System.out.print("Enter the first number: "); 
+                firstNumber = in.nextDouble();
+                System.out.print("Enter the second number: ");
+                secondNumber = in.nextDouble();
+                Multiplication multiple = new Multiplication();  
+                System.out.println("Result = " + multiple.multiply(firstNumber, secondNumber)); 
             default:
                 System.out.println("Invalid Input!!!");
                 break;
