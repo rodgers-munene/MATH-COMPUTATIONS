@@ -11,6 +11,7 @@ public class Main {
         System.out.println("2: Division");
         System.out.println("3: Area of a Triange");
         System.out.println("4: Perimeter of a rectangle");
+        System.out.println("5: Area of Circle");
         System.out.print("\nPlease Select the operation you would like to perfom: ");
         int choice = in.nextInt();
 
@@ -47,7 +48,12 @@ public class Main {
                 RectanglePerimeter perimeter = new RectanglePerimeter();
                 System.out.println("Result = " + perimeter.perimeter(firstNumber, secondNumber));
                 break;
-
+            case 5:
+                System.out.print("Enter the radius of the circle: ");
+                firstNumber = in.nextDouble();
+                CircleArea circle = new CircleArea();
+                System.out.println("Result = " + circle.area(firstNumber));
+                break;        
             default:
                 System.out.println("Invalid Input!!!");
                 break;
