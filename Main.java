@@ -13,8 +13,11 @@ public class Main {
         System.out.println("4: Perimeter of a rectangle");
         System.out.println("5: Area of Circle");
         System.out.println("6: Multiplication");
+        System.out.println("7: Perimeter of a circle");
+        System.out.println("8: Subtraction");
         System.out.print("\nPlease Select the operation you would like to perfom: ");
         int choice = in.nextInt();
+        System.out.println("\n");
 
         switch (choice) {
             case 1:
@@ -42,7 +45,7 @@ public class Main {
                 System.out.println("Result = " + area.area(firstNumber, secondNumber));
                 break;
             case 4:
-                System.out.print("Enter the length of the rextangle:");
+                System.out.print("Enter the length of the rectangle: ");
                 firstNumber = in.nextDouble();
                 System.out.print("Enter the width of the rectangle: ");
                 secondNumber = in.nextDouble();
@@ -54,14 +57,29 @@ public class Main {
                 firstNumber = in.nextDouble();
                 CircleArea circle = new CircleArea();
                 System.out.println("Result = " + circle.area(firstNumber));
-                break; 
+                break;
             case 6:
                 System.out.print("Enter the first number: "); 
                 firstNumber = in.nextDouble();
                 System.out.print("Enter the second number: ");
                 secondNumber = in.nextDouble();
                 Multiplication multiple = new Multiplication();  
-                System.out.println("Result = " + multiple.multiply(firstNumber, secondNumber)); 
+                System.out.println("Result = " + multiple.multiply(firstNumber, secondNumber));
+                break;
+            case 7:
+                System.out.print("Enter the radius of the circle: ");
+                firstNumber = in.nextDouble();
+                CirclePerimeter perim = new CirclePerimeter();
+                System.out.println("Result = " + perim.perimeter(firstNumber));
+                break;
+            case 8:
+                System.out.print("Enter the first number: ");
+                firstNumber = in.nextDouble();
+                System.out.print("Enter the second number: ");
+                secondNumber = in.nextDouble();
+                Subtraction subtract = new Subtraction();
+                System.out.println("Result = " + subtract.subtract(firstNumber, secondNumber));
+                break;
             default:
                 System.out.println("Invalid Input!!!");
                 break;
